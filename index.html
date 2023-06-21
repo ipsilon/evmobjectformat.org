@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>EOF - EVM Object Format</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/eof.png" alt="" /></span>
+						<h1>EOF</h1>
+						<p>EVM Object Format</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#first">EOF EIPs</a></li>
+							<li><a href="#second">Implementations</a></li>
+							<li><a href="#cta">Learn More</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Introduction to EVM Object Format</h2>
+										</header>
+                    <p>EVM Object Format (EOF) introduces a way to structure EVM bytecode, defining
+a clear separation of sections (i.e. code, data, etc), it also allow to create
+new EOF versions without breaking backwards compatibility. Another benefit is
+that EOF Bytecode is validated at deploy time, instead of validating each time
+the code is executed as in current EVM bytecode.</p>
+									</div>
+									<span class="image"><img src="images/pic01.png" alt="" /></span>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>EOF EIPs</h2>
+								</header>
+								<ul class="features">
+									<li>
+										<span class="icon solid major style1 fa-check"></span>
+                    <h3><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a></h3>
+                    <p>Rejects deploying code starting with the byte 0xef. This EIP is already live on Ethereum Mainnet</p>
+									</li>
+									<li>
+										<span class="icon major style3 fa-file-code"></span>
+                    <h3><a href="https://eips.ethereum.org/EIPS/eip-3540">EIP-3540</a></h3>
+                    <p><b>EOF - EVM Object Format</b>.</br> Introduces the EOF container format with once-off validation at deploy time.</p>
+									</li>
+									<li>
+										<span class="icon major style5 fa-file-code"></span>
+                    <h3><a href="https://eips.ethereum.org/EIPS/eip-3670">EIP-3670</a></h3>
+                    <p><b>EOF - Code Validation</b>.</br> Defines how EOF bytecode is validated for correctness at deploy time.</p>
+									</li>
+								</ul>
+                <ul class="features">
+									<li>
+										<span class="icon major style2 fa-file-code"></span>
+                    <h3><a href="https://eips.ethereum.org/EIPS/eip-4200">EIP-4200</a></h3>
+                    <p><b>EOF - Static Relative Jumps</b>.</br> Introduces new instructions: RJUMP, RJUMPI, and RJUMPV with a signed immediate encoding the jump destination.</p>
+									</li>
+									<li>
+										<span class="icon major style4 fa-file-code"></span>
+                    <h3><a href="https://eips.ethereum.org/EIPS/eip-4750">EIP-4750</a></h3>
+                    <p><b>EOF - Functions</b>.</br>Introduces EOF Functions as separate code sections. Also introduces two new instructions; CALLF and RETF to call and return from functions.</p>
+									</li>
+									<li>
+										<span class="icon major style7 fa-file-code"></span>
+                    <h3><a href="https://eips.ethereum.org/EIPS/eip-5450">EIP-5450</a></h3>
+                    <p><b>EOF - Stack Validation</b>.</br> Deploy-time validation of stack usage for EOF Functions.</p>
+									</li>
+                </ul>
+                <ul class="features">
+									<li>
+										<span class="icon major style8 fa-file-code"></span>
+                    <h3><a href="https://eips.ethereum.org/EIPS/eip-6206">EIP-6206</a></h3>
+                    <p><b>EOF - JUMPF intruction.</b><br>Introduces JUMPF instruction for chaining function calls.</p>
+									</li>
+                </ul>
+							</section>
+
+						<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Implementations</h2>
+									<p>EOF has been implemented in the following clients and projects.</p>
+								</header>
+								<ul class="statistics">
+									<li class="style1">
+										<span class="icon solid fa-code-branch"></span>
+                    <strong><a href="https://github.com/ethereum/evmone">Evmone</a></strong>
+									</li>
+									<li class="style2">
+										<span class="icon solid fa-code-branch"></span>
+                    <strong><a href="https://github.com/ipsilon/go-ethereum/tree/eof-cancun">Geth</a></strong>
+									</li>
+									<li class="style3">
+										<span class="icon solid fa-code-branch"></span>
+                    <strong><a href="https://github.com/hugo-dc/eof-rs">EOF-Rs</a></strong> (Validation)
+									</li>
+								</ul>
+							</section>
+
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Learn More</h2>
+                    <p>Visit <a href="https://notes.ethereum.org/ZOEv9yyHQdmxTVaYiJmy9Q">the latest EOF specification (Mega-EOF)</a></p>
+                    <p>Read <a href="#first">the EOF EIPs</a>.</p>
+                    <p>Watch <a href="https://www.youtube.com/results?search_query=EOF+Implementers+call">EOF Implementers Calls on YouTube</a></p>
+                    <p>Ask EOF related questions <a href="https://twitter.com/teamipsilon">on Twitter</a>.</p>
+                  <!--
+                  <p>To learn more about EOF take a look at the <a href="#">EOF book</a>.</p>
+                  -->
+								</header>
+								<footer class="major">
+                  <!--
+									<ul class="actions special">
+										<li><a href="generic.html" class="button primary">EOF Book</a></li>
+									</ul>
+                  -->
+								</footer>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+            <section>
+							<h2>Ipsilon</h2>
+							<ul class="actions">
+								<li><a href="https://ipsilon.xyz" class="button">Learn More</a></li>
+							</ul>
+            </section>
+            <section>
+              <p>EOF Object Format is part of Ipsilon's projects. To learn more about other EVM related projects visit <a href="https://ipsilon.xyz">ipsilon.xyz</a></p>
+							<ul class="icons">
+								<li><a href="https://twitter.com/teamipsilon" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="https://github.com/ipsilon" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.youtube.com/results?search_query=EOF+Implementers+call" class="icon brands fa-youtube alt"><span class="label">YouTube</span></a></li>
+							</ul>
+            </section>
+						<p class="copyright">&copy; 2023 - Ipsilon Team. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
