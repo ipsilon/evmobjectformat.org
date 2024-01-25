@@ -26,7 +26,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">Why?</a></li>
+							<li><a href="#first">Motivation</a></li>
 							<li><a href="#second">Implementations</a></li>
               <!--<li><a href="#faq">FAQ</a></li>-->
 							<li><a href="#cta">Learn More</a></li>
@@ -52,32 +52,32 @@
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>Why?</h2>
+									<h2>Motivation</h2>
 								</header>
 								<ul class="features">
 									<li>
                     <h3>Code validation at deploy time</h3>
-                    <p>Instead of having the intepreter validate instructions repeatedly at runtime, EVM bytecode is validated only once during contract creation, making for a faster, cheaper, and more secure execution.</p>
+                    <p>Instead of having the interpreter validate instructions repeatedly at runtime, EVM bytecode is validated only once during contract creation, providing a faster, cheaper, and more secure execution.</p>
 									</li>
 									<li>
                     <h3>Code-data separation</h3>
                     <p>EOF separates EVM bytecode from data, making it easier for static analysis tools, formal verification, and L2s to process executable code.</p>
 									</li>
 									<li>
-                    <h3>Remove dynamic JUMPs</h3>
-                    <p>EOF bytecode uses only static relative jumps, which is very desirable for tools involving static analysis, formal verification, compilation to native code, as well as L2 EVMs.</p>
+                    <h3>Removal of dynamic JUMPs</h3>
+                    <p>EOF bytecode uses only static relative jumps, which is very desirable for tools involving static analysis, formal verification, compilation to native code, zero-knowledge circuits, as well as L2 EVMs.</p>
 									</li>
 									<li>
                     <h3>Code and gas non-observability</h3>
-                    <p>Lack of code and gas observability is a <a href="https://ethereum-magicians.org/t/eof-proposal-ban-code-introspection-of-eof-accounts/12113">long-sought trait of the EVM</a> allowing for more maintainable and upgradeable protocol.</p>
+                    <p>Lack of code and gas observability is a <a href="https://ethereum-magicians.org/t/eof-proposal-ban-code-introspection-of-eof-accounts/12113">long-sought trait of the EVM</a> allowing a more maintainable and upgradeable protocol.</p>
 									</li>
 									<li>
-                    <h3>Remove JUMPDEST-analysis</h3>
-                    <p>By obsoleting JUMPDEST-analysis done in contract runtime EOF simplifies reasoning about EVM bytecode, as well as other changes like <a href="https://eips.ethereum.org/EIPS/eip-6690">EVMMAX</a>, <a href="https://verkle.info">Verkle</a> or bytecode size increase.</p>
+                    <h3>Removal of JUMPDEST-analysis</h3>
+                    <p>By obsoleting JUMPDEST-analysis done at contract runtime, EOF simplifies reasoning about EVM bytecode, as well as other changes, like <a href="https://eips.ethereum.org/EIPS/eip-6690">EVMMAX</a>, <a href="https://verkle.info">Verkle</a> or bytecode size increase.</p>
 									</li>
 									<li>
-                    <h3>Add EVM functions</h3>
-                    <p>EOF Functions is a subroutines mechanism not relying on dynamic jumps, and improving analysis opportunities by encoding the number of inputs and outputs for each given function, and isolating the stack of each function.</p>
+                    <h3>First-class support for EVM functions</h3>
+                    <p>Functions in EOF are a subroutine mechanism not relying on dynamic jumps. It improves analysis opportunities by encoding the number of inputs and outputs for each given function, and isolating the stack of each function.</p>
 									</li>
 									<li>
                     <h3>Code versioning</h3>
@@ -85,7 +85,7 @@
 									</li>
 									<li>
                     <h3>Addressing EVM pain points</h3>
-                    <p>EOF proposals address many long-standing issues and quirks of EVM spec, streamlining compilers development, providing new compiler optimization opportunities, and ultimately improving developer experience. An example of this are the new stack management instructions.</p>
+                    <p>EOF proposals address many long-standing issues and quirks of the EVM, streamlining compiler development, providing new compiler optimization opportunities, and ultimately improving developer experience. An example of this are the new improved stack management instructions.</p>
 									</li>
                 				</ul>
 							</section>
