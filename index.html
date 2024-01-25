@@ -26,7 +26,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">EOF EIPs</a></li>
+							<li><a href="#first">Motivation</a></li>
 							<li><a href="#second">Implementations</a></li>
               <!--<li><a href="#faq">FAQ</a></li>-->
 							<li><a href="#cta">Learn More</a></li>
@@ -40,9 +40,6 @@
 							<section id="intro" class="main">
 								<div class="spotlight">
 									<div class="content">
-										<header class="major">
-											<h2>Introduction to EVM Object Format</h2>
-										</header>
                     <p>The EVM Object Format (EOF) is an important upgrade for the Ethereum Virtual Machine, comprising a series of
 						 EIPs. It introduces an extensible and versioned container format for EVM bytecode with a once-off 
 						 validation at deploy time, focusing on separating code and data, enhancing code validation, and improving 
@@ -55,49 +52,42 @@
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>EOF EIPs</h2>
+									<h2>Motivation</h2>
 								</header>
 								<ul class="features">
 									<li>
-										<span class="icon solid major style1 fa-check"></span>
-                    <h3><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a></h3>
-                    <p>Rejects deploying code starting with the byte 0xef. This EIP is already live on Ethereum Mainnet</p>
+                    <h3>Code validation at deploy time</h3>
+                    <p>Instead of having the interpreter validate instructions repeatedly at runtime, EVM bytecode is validated only once during contract creation, providing a faster, cheaper, and more secure execution.</p>
 									</li>
 									<li>
-										<span class="icon major style3 fa-file-code"></span>
-                    <h3><a href="https://eips.ethereum.org/EIPS/eip-3540">EIP-3540</a></h3>
-                    <p><b>EOF - EVM Object Format</b>.</br> Introduces the EOF container format with once-off validation at deploy time.</p>
+                    <h3>Code-data separation</h3>
+                    <p>EOF separates EVM bytecode from data, making it easier for static analysis tools, formal verification, and L2s to process executable code.</p>
 									</li>
 									<li>
-										<span class="icon major style5 fa-file-code"></span>
-                    <h3><a href="https://eips.ethereum.org/EIPS/eip-3670">EIP-3670</a></h3>
-                    <p><b>EOF - Code Validation</b>.</br> Defines how EOF bytecode is validated for correctness at deploy time.</p>
-									</li>
-								</ul>
-                <ul class="features">
-									<li>
-										<span class="icon major style2 fa-file-code"></span>
-                    <h3><a href="https://eips.ethereum.org/EIPS/eip-4200">EIP-4200</a></h3>
-                    <p><b>EOF - Static Relative Jumps</b>.</br> Introduces new instructions: RJUMP, RJUMPI, and RJUMPV with a signed immediate encoding the jump destination.</p>
+                    <h3>Removal of dynamic JUMPs</h3>
+                    <p>EOF bytecode uses only static relative jumps, which is very desirable for tools involving static analysis, formal verification, compilation to native code, zero-knowledge circuits, as well as L2 EVMs.</p>
 									</li>
 									<li>
-										<span class="icon major style4 fa-file-code"></span>
-                    <h3><a href="https://eips.ethereum.org/EIPS/eip-4750">EIP-4750</a></h3>
-                    <p><b>EOF - Functions</b>.</br>Introduces EOF Functions as separate code sections. Also introduces two new instructions; CALLF and RETF to call and return from functions.</p>
+                    <h3>Code and gas non-observability</h3>
+                    <p>Lack of code and gas observability is a <a href="https://ethereum-magicians.org/t/eof-proposal-ban-code-introspection-of-eof-accounts/12113">long-sought trait of the EVM</a> allowing a more maintainable and upgradeable protocol.</p>
 									</li>
 									<li>
-										<span class="icon major style7 fa-file-code"></span>
-                    <h3><a href="https://eips.ethereum.org/EIPS/eip-5450">EIP-5450</a></h3>
-                    <p><b>EOF - Stack Validation</b>.</br> Deploy-time validation of stack usage for EOF Functions.</p>
+                    <h3>Removal of JUMPDEST-analysis</h3>
+                    <p>By obsoleting JUMPDEST-analysis done at contract runtime, EOF simplifies reasoning about EVM bytecode, as well as other changes, like <a href="https://eips.ethereum.org/EIPS/eip-6690">EVMMAX</a>, <a href="https://verkle.info">Verkle</a> or bytecode size increase.</p>
 									</li>
-                </ul>
-                <ul class="features">
 									<li>
-										<span class="icon major style8 fa-file-code"></span>
-                    <h3><a href="https://eips.ethereum.org/EIPS/eip-6206">EIP-6206</a></h3>
-                    <p><b>EOF - JUMPF intruction.</b><br>Introduces JUMPF instruction for chaining function calls.</p>
+                    <h3>First-class support for EVM functions</h3>
+                    <p>Functions in EOF are a subroutine mechanism not relying on dynamic jumps. It improves analysis opportunities by encoding the number of inputs and outputs for each given function, and isolating the stack of each function.</p>
 									</li>
-                </ul>
+									<li>
+                    <h3>Code versioning</h3>
+                    <p>Introducing versioning will make backwards-incompatible upgrades much easier. Backwards compatible changes can be done without bumping the EOF version, even if new instructions are introduced.</p>
+									</li>
+									<li>
+                    <h3>Addressing EVM pain points</h3>
+                    <p>EOF proposals address many long-standing issues and quirks of the EVM, streamlining compiler development, providing new compiler optimization opportunities, and ultimately improving developer experience. An example of this are the new improved stack management instructions.</p>
+									</li>
+                				</ul>
 							</section>
 
 						<!-- Second Section -->
@@ -145,7 +135,7 @@
                   </li>
                   <li class="style2">
                     <span class="icon solid fa-file"></span>
-                    <strong><a href="#first">EOF EIPs</a></strong>
+                    <strong>EOF EIPs (pending...)</strong>
                   </li>
                   <li class="style3">
                     <span class="icon solid fa-play"></span>
