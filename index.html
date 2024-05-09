@@ -40,8 +40,8 @@
 							<section id="intro" class="main">
 								<div class="spotlight">
 									<div class="content">
-                    <p>The EVM Object Format (EOF) is an important upgrade for the Ethereum Virtual Machine, comprising a series of
-						 EIPs. It introduces an extensible and versioned container format for EVM bytecode with a once-off 
+                    <p>The EVM Object Format (EOF) is an important upgrade for the Ethereum Virtual Machine, comprising <a href="https://eips.ethereum.org/EIPS/eip-7692">a series of
+						 EIPs</a>. It introduces an extensible and versioned container format for EVM bytecode with a once-off 
 						 validation at deploy time, focusing on separating code and data, enhancing code validation, and improving 
 					     overall efficiency. </p>
 									</div>
@@ -65,7 +65,7 @@
 									</li>
 									<li>
                     <h3>Removal of dynamic JUMPs</h3>
-                    <p>EOF bytecode uses only static relative jumps, which is very desirable for tools involving static analysis, formal verification, compilation to native code, zero-knowledge circuits, as well as L2 EVMs.</p>
+                    <p>EOF bytecode uses only <a href="https://eips.ethereum.org/EIPS/eip-4200">static relative jumps</a>, which is very desirable for tools involving static analysis, formal verification, compilation to native code, zero-knowledge circuits, as well as L2 EVMs.</p>
 									</li>
 									<li>
                     <h3>Code and gas non-observability</h3>
@@ -77,7 +77,7 @@
 									</li>
 									<li>
                     <h3>First-class support for EVM functions</h3>
-                    <p>Functions in EOF are a subroutine mechanism not relying on dynamic jumps. It improves analysis opportunities by encoding the number of inputs and outputs for each given function, and isolating the stack of each function.</p>
+                    <p><a href="https://eips.ethereum.org/EIPS/eip-4750">Functions in EOF</a> are a subroutine mechanism not relying on dynamic jumps. It improves analysis opportunities by encoding the number of inputs and outputs for each given function, and isolating the stack of each function.</p>
 									</li>
 									<li>
                     <h3>Code versioning</h3>
@@ -105,13 +105,33 @@
 										<span class="icon solid fa-code-branch"></span>
                     <strong><a href="https://github.com/hyperledger/besu/tree/mega-eof">Besu</a></strong>
 									</li>
-                  <li class="style3">
-                    <span class="icon solid fa-code-branch"></span>
-                    <strong>EOF Tests</strong>
-                    <div><a href="https://github.com/ethereum/tests/tree/develop/src/EOFTestsFiller">- Validation Tests</a></div>
-                    <div><a href="https://github.com/ethereum/tests/tree/develop/src/EIPTestsFiller/StateTests/stEOF">- Execution Tests</a></div>
-                    </ul>
-                  </li>
+									<li class="style3">
+										<span class="icon solid fa-code-branch"></span>
+                    <strong><a href="https://github.com/NethermindEth/nethermind/pull/6896">Nethermind 🚧</a></strong>
+									</li>
+								</ul>
+								<ul class="statistics">
+									<li class="style5">
+										<span class="icon solid fa-code-branch"></span>
+                    <strong><a href="https://github.com/ethereum/go-ethereum/pull/29518">Geth 🚧</a></strong>
+									</li>
+									<li class="style1">
+										<span class="icon solid fa-code-branch"></span>
+                    <strong><a href="https://github.com/ethereum/solidity/pull/13825">Solidity 🚧</a></strong>
+									</li>
+									<li class="style2">
+										<span class="icon solid fa-code-branch"></span>
+                    <strong><a href="https://github.com/ethereumjs/ethereumjs-monorepo/pull/2453">EthereumJS 🚧</a></strong>
+									</li>
+								</ul>
+								<ul class="statistics">
+									<li class="style3">
+										<span class="icon solid fa-code-branch"></span>
+										<strong>EOF Tests</strong>
+										<div><a href="https://github.com/ethereum/tests/tree/develop/src/EOFTestsFiller">- Validation Tests</a></div>
+										<div><a href="https://github.com/ethereum/tests/tree/develop/src/EIPTestsFiller/StateTests/stEOF">- Execution Tests</a></div>
+										<div><a href="https://github.com/shemnon/execution-spec-tests/tree/eof/omnibus">- Execution Spec Tests</a></div>
+									</li>
 								</ul>
 							</section>
 
@@ -135,11 +155,11 @@
                   </li>
                   <li class="style2">
                     <span class="icon solid fa-file"></span>
-                    <strong>EOF EIPs (pending...)</strong>
+                    <strong><a href="https://eips.ethereum.org/EIPS/eip-7692">EOF EIPs</a></strong>
                   </li>
                   <li class="style3">
                     <span class="icon solid fa-play"></span>
-                    <strong><a href="https://www.youtube.com/results?search_query=EOF+Implementers+call">EOF Implementers Calls</a></strong>
+                    <strong><a href="https://github.com/ethereum/pm/issues?q=is%3Aissue+%22EOF+Implementers+Call%22">EOF Implementers Calls</a></strong>
                   </li>
                   <li class="style4">
                     <span class="icon solid fa-question"></span>
@@ -170,7 +190,7 @@
 							<ul class="icons">
 								<li><a href="https://twitter.com/teamipsilon" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
 								<li><a href="https://github.com/ipsilon/eof" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.youtube.com/results?search_query=EOF+Implementers+call" class="icon brands fa-youtube alt"><span class="label">YouTube</span></a></li>
+								<li><a href="https://www.youtube.com/playlist?list=PLJqWcTqh_zKHu7Z91YVYWy_PSmOc_66-F" class="icon brands fa-youtube alt"><span class="label">YouTube</span></a></li>
 							</ul>
             </section>
 						<p class="copyright">&copy; 2023 - Ipsilon Team. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
