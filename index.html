@@ -96,34 +96,214 @@
 									<h2>Implementations</h2>
 									<p>EOF has been implemented in the following clients and projects.</p>
 								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-                    <strong><a href="https://github.com/ethereum/evmone">Evmone</a></strong>
-									</li>
-									<li class="style2">
-										<span class="icon solid fa-code-branch"></span>
-                    <strong><a href="https://github.com/hyperledger/besu/tree/mega-eof">Besu</a></strong>
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-code-branch"></span>
-                    <strong><a href="https://github.com/NethermindEth/nethermind/pull/6896">Nethermind 🚧</a></strong>
-									</li>
-								</ul>
-								<ul class="statistics">
-									<li class="style5">
-										<span class="icon solid fa-code-branch"></span>
-                    <strong><a href="https://github.com/ethereum/go-ethereum/pull/29518">Geth 🚧</a></strong>
-									</li>
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-                    <strong><a href="https://github.com/ethereum/solidity/pull/13825">Solidity 🚧</a></strong>
-									</li>
-									<li class="style2">
-										<span class="icon solid fa-code-branch"></span>
-                    <strong><a href="https://github.com/ethereumjs/ethereumjs-monorepo/pull/2453">EthereumJS 🚧</a></strong>
-									</li>
-								</ul>
+								<div class="statistics" style="margin: 0px auto; width: 70%; font-size: 85%">
+									<!-- **NOTE**: How to obtain the HTML table? -->
+									<!-- 1. Copy source (including reference links) from https://github.com/ipsilon/eof/blob/main/spec/implementation_matrix.md -->
+									<!-- 2. Paste into https://parsedown.org/demo, convert to HTML -->
+									<!-- 3. Paste result below -->
+										<table>
+											<thead>
+											<tr>
+											<th></th>
+											<th><a href="https://eips.ethereum.org/EIPS/eip-3540">3540</a></th>
+											<th><a href="https://eips.ethereum.org/EIPS/eip-3670">3670</a></th>
+											<th><a href="https://eips.ethereum.org/EIPS/eip-4200">4200</a></th>
+											<th><a href="https://eips.ethereum.org/EIPS/eip-4750">4750</a></th>
+											<th><a href="https://eips.ethereum.org/EIPS/eip-5450">5450</a></th>
+											<th><a href="https://eips.ethereum.org/EIPS/eip-6206">6206</a></th>
+											<th><a href="https://eips.ethereum.org/EIPS/eip-7480">7480</a></th>
+											<th><a href="https://eips.ethereum.org/EIPS/eip-7069">7069</a></th>
+											<th><a href="https://eips.ethereum.org/EIPS/eip-7620">7620</a></th>
+											<th><a href="https://eips.ethereum.org/EIPS/eip-7698">7698</a></th>
+											<th><a href="https://eips.ethereum.org/EIPS/eip-663">663</a></th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+											<td><a href="https://github.com/ipsilon/eof/blob/main/spec/eof.md"><strong>Megaspec</strong></a></td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											</tr>
+											<tr>
+											<td><strong>EIP</strong></td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											</tr>
+											<tr>
+											<td><strong>testing</strong></td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td></td>
+											<td>🚧</td>
+											</tr>
+											<tr>
+											<td><a href="https://github.com/hyperledger/besu/tree/mega-eof">besu</a></td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td></td>
+											<td>👍</td>
+											</tr>
+											<tr>
+											<td>erigon</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											</tr>
+											<tr>
+											<td>erigon++ (silkworm)</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>🚧</td>
+											<td>👍</td>
+											</tr>
+											<tr>
+											<td><a href="https://github.com/ethereumjs/ethereumjs-monorepo/pull/2453">ethereumjs</a></td>
+											<td>stale</td>
+											<td>stale</td>
+											<td>stale</td>
+											<td>stale</td>
+											<td>stale</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											</tr>
+											<tr>
+											<td><a href="https://github.com/ethereum/evmone">evmone</a></td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>🚧</td>
+											<td>👍</td>
+											</tr>
+											<tr>
+											<td><a href="https://github.com/ethereum/go-ethereum/pull/29518">geth</a></td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td></td>
+											<td>🚧</td>
+											</tr>
+											<tr>
+											<td><a href="https://github.com/NethermindEth/nethermind/commits/feature/evm/eof">nethermind</a></td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td></td>
+											<td>🚧</td>
+											</tr>
+											<tr>
+											<td>revm</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>🚧</td>
+											<td>👍</td>
+											<td>👍</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td></td>
+											<td>👍</td>
+											</tr>
+											<tr>
+											<td><a href="https://github.com/ethereum/solidity/pull/13825">solidity</a></td>
+											<td>🚧</td>
+											<td>N/A</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>N/A</td>
+											<td></td>
+											<td></td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td>🚧</td>
+											<td></td>
+											</tr>
+											<tr>
+											<td><a href="https://github.com/vyperlang/vyper/pull/3457">vyper</a></td>
+											<td>stale</td>
+											<td>N/A</td>
+											<td>stale</td>
+											<td>stale</td>
+											<td>N/A</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											</tr>
+											</tbody>
+											</table>																					
+									</div>
 								<ul class="statistics">
 									<li class="style3">
 										<span class="icon solid fa-code-branch"></span>
