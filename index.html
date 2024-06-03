@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/tablesaw.css">
 	</head>
 	<body class="is-preload">
 
@@ -100,12 +101,12 @@
 									<!-- **NOTE**: How to obtain the HTML table? -->
 									<!-- 1. Copy source (including reference links) from https://github.com/ipsilon/eof/blob/main/spec/implementation_matrix.md -->
 									<!-- 2. Paste into https://parsedown.org/demo, convert to HTML -->
-									<!-- 3. Paste result below -->
+									<!-- 3. Paste result below, preserving both tablesaw attributes -->
 
-<table>
+<table data-tablesaw-mode="swipe">
 <thead>
 <tr>
-<th></th>
+<th data-tablesaw-priority="persist"></th>
 <th><a href="https://eips.ethereum.org/EIPS/eip-3540">3540</a></th>
 <th><a href="https://eips.ethereum.org/EIPS/eip-3670">3670</a></th>
 <th><a href="https://eips.ethereum.org/EIPS/eip-4200">4200</a></th>
@@ -387,6 +388,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/tablesaw.js"></script>
+			<script src="assets/js/tablesaw-init.js"></script>
 
 	</body>
 </html>
