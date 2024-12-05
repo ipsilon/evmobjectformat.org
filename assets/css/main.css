@@ -3783,3 +3783,8 @@ input, select, textarea {
 			}
 
 		}
+
+/* Resources */
+  #resources a {
+    color: #3232FD;
+  }
