@@ -100,10 +100,10 @@ input, select, textarea {
 
 	body {
 		background-color: #e6e6fa;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #8e8eff 15%, #F0F0F1 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #8e8eff 15%, #F0F0F1 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #8e8eff 15%, #F0F0F1 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #8e8eff 15%, #F0F0F1 85%);
+		background-image: url("/images/overlay.png"), -moz-linear-gradient(45deg, #8e8eff 15%, #F0F0F1 85%);
+		background-image: url("/images/overlay.png"), -webkit-linear-gradient(45deg, #8e8eff 15%, #F0F0F1 85%);
+		background-image: url("/images/overlay.png"), -ms-linear-gradient(45deg, #8e8eff 15%, #F0F0F1 85%);
+		background-image: url("/images/overlay.png"), linear-gradient(45deg, #8e8eff 15%, #F0F0F1 85%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2630,6 +2630,19 @@ input, select, textarea {
 				padding-right: 0 !important;
 			}
 
+  section.normal {
+    text-align: left;
+  }
+
+      section.normal header.major h2:after, article.special header.major h2:after {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+
+  section.normal h2 {
+    text-align: center;
+  }
 /* Section/Article */
 
 	section.special, article.special {

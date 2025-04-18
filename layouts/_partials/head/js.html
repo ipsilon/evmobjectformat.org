@@ -1,0 +1,15 @@
+{{ $main := resources.Get "js/main.js" | resources.Fingerprint }}
+{{ $jq := resources.Get "js/jquery.min.js" | resources.Fingerprint }}
+{{ $jqScrollex := resources.Get "js/jquery.scrollex.min.js" | resources.Fingerprint }}
+{{ $jqScrolly := resources.Get "js/jquery.scrolly.min.js" | resources.Fingerprint }}
+{{ $browser := resources.Get "js/browser.min.js" | resources.Fingerprint }}
+{{ $breakpoints := resources.Get "js/breakpoints.min.js" | resources.Fingerprint }}
+{{ $util := resources.Get "js/util.js" | resources.Fingerprint }}
+
+<script src="{{ $jq.RelPermalink }}"></script>
+<script src="{{ $jqScrollex.RelPermalink }}"></script>
+<script src="{{ $jqScrolly.RelPermalink }}"></script>
+<script src="{{ $browser.RelPermalink }}"></script>
+<script src="{{ $breakpoints.RelPermalink }}"></script>
+<script src="{{ $main.RelPermalink }}"></script>
+<script src="{{ $util.RelPermalink }}"></script>
