@@ -1,0 +1,13 @@
+baseURL = 'https://evmobjectformat.org/'
+languageCode = 'en-us'
+title = 'EOF - EVM Object Format'
+
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

@@ -1,0 +1,89 @@
+{{ define "main" }}
+  <section id="intro" class="main">
+    <div class="spotlight">
+      <div class="content">
+        {{ .Content }}
+      </div>
+      <span class="image"><img src="eof_icon.jpg" alt="" /></span>
+    </div>
+  </section>
+{{ end }}
+
+{{ define "motivation" }}
+<section id="first" class="main special">
+  <header class="major">
+    <h2>Motivation</h1>
+  </header>
+  <ul class="features">
+    {{ range where .Site.RegularPages.ByTitle "Type" "motivation" }}
+    <li>
+      {{ .Content }}
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{ define "implementation" }}
+    {{ range where .Site.RegularPages.ByTitle "Type" "implementation" }}
+      {{ .Content }}
+    {{ end }}
+{{ end }}
+
+{{ define "tests" }}
+<ul class="statistics">
+  <li class="style3">
+    <span class="icon solid fa-code-branch"></span>
+    <strong>EOF Tests</strong>
+    <div><a href="https://github.com/ethereum/tests/tree/develop/src/EOFTestsFiller">- Validation Tests</a></div>
+    <div><a href="https://ethereum.github.io/execution-spec-tests/main/tests/osaka/eip7692_eof_v1/">- Execution Spec Tests</a></div>
+  </li>
+</ul>
+{{ end }}
+
+{{ define "learn" }}
+<section id="cta" class="main special">
+  <header class="major">
+    <h2>Learn More</h2>
+  </header>
+  <ul class="statistics">
+    <li class="style1">
+      <span class="icon solid fa-book"></span>
+      <strong><a href="https://github.com/ipsilon/eof/blob/main/spec/eof.md">EOF Specification</a></strong>
+    </li>
+    <li class="style2">
+      <span class="icon solid fa-file"></span>
+      <strong><a href="https://eips.ethereum.org/EIPS/eip-7692">EOF EIPs</a></strong>
+    </li>
+    <li class="style3">
+      <span class="icon solid fa-play"></span>
+      <strong><a href="https://github.com/ethereum/pm/issues?q=is%3Aissue+%22EOF+Implementers+Call%22">EOF Implementers Calls</a></strong>
+    </li>
+    <li class="style4">
+      <span class="icon solid fa-question"></span>
+      <strong><a href="https://twitter.com/teamipsilon">Ask Questions</a></strong>
+    </li>
+  </ul>
+</section>
+{{ end }}
+
+{{ define "resources" }}
+<section id="resources" class="main special">
+  <header class="major">
+    {{ range where .Site.RegularPages.ByTitle "Type" "resources" }}
+      {{ .Content }}
+    {{ end }}
+  </header>
+</section>
+{{ end }}
+
+{{ define "faq" }}
+<section id="faq" class="main normal">
+  <header class="major">
+    <h2>FAQs - Frequently Asked Questions</h2>
+  </header>
+    {{ range where .Site.RegularPages.ByTitle "Type" "faq" }}
+      {{ .Content }}
+    {{ end }}
+</section>
+{{ end }}

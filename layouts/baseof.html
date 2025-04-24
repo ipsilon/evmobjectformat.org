@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+    <header id="header" class="alt">
+      {{ partial "header.html" . }}
+    </header>
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+    <div id="main">
+      {{ block "main" . }}{{ end }}
+      {{ block "motivation" . }}{{ end }}
+      <section id="second" class="main special">
+      <header class="major">
+      {{ block "implementation" . }} {{ end }}
+      </header>
+      {{ block "tests" . }} {{ end }}
+      </section>
+      {{ block "learn" . }} {{ end }}
+      {{ block "resources" . }} {{ end }}
+      {{ block "faq" . }} {{ end }}
+    </div>
+    <footer id="footer">
+      {{ partial "footer.html" . }}
+    </footer>
+  </div>
+  {{ partialCached "head/js.html" . }}
+</body>
+</html>

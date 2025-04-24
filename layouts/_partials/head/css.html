@@ -1,0 +1,28 @@
+{{- with resources.Get "css/main.css" }}
+  {{- if hugo.IsDevelopment }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- with resources.Get "css/noscript.css" }}
+  {{- if hugo.IsDevelopment }}
+    <noscript><link rel="stylesheet" href="{{ .RelPermalink }}"/></noscript>
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <noscript><link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"/></noscript>
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- with resources.Get "css/fontawesome-all.min.css" }}
+  {{- if hugo.IsDevelopment }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+
