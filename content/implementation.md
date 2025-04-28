@@ -7,7 +7,7 @@ order: 1
 EOF has been implemented in the following clients and projects.
 
 |                | [eof-devnet-0]           | [eof-devnet-1]       | eof-devnet-2 |
-|----------------|--------------------------|----------------------|--------------|
+|----------------|:-------------------------|:---------------------|:-------------|
 | Megaspec       | ✅ [Megaspec v0.1.1]     | ✅ [Megaspec main]   | 🚧           |
 | **EIP**        | ✅ [EIP-7692 `8580af`]   | ✅ [EIP-7692]        | 🚧           |
 | **testing**    | ✅ [EEST eip7692@v2.3.0] | ✅ [EEST v4.3.0]     | 🚧           |
