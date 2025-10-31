@@ -5,7 +5,7 @@ order: 1
 
 ## Resources
 
-[eof.wtf](https://eof.wtf): EOF Parser and Visualizer.
+[eof.wtf](https://eof-wtf.netlify.app/): EOF Parser and Visualizer.
 
 [evm.codes](https://www.evm.codes/?fork=EOF): EVM Opcode Reference
 (Deprecated opcodes have yet to be removed).
